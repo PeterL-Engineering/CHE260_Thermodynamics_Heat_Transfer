@@ -69,19 +69,55 @@ encoder-decoder architecture. This design captures high-level semantic features 
 \begin{multicols}{2}
 
 \section{Introduction}
+\label{introduction}
 
-\section{Scope \& Feasibility}
+\section{Experimental Methods}
+\label{experimental_methods}
 
-Begin by solving Hudgkin-Huxley equations using Euler's and Improved Euler's Method (since these are the methods we have learned thus far from ESC103)
-then expand and solve using Runge-Kutta methods once they are covered in CHE260. At a high-level, these solvers will generate synthetic neural data through
-the Hodgkin-Huxley equations which are a set of non-linear ordinary differential equations that describe how ion channels create action potential.
+\subsection{Path Independencies of Thermodynamic State Properties}
+\label{methods_path_independencies_thermodynamic_properties}
 
-Following this we will design and implement a digital filter to isolate the spike band, and create a spike detection algorithm based upon an adaptive threshold
-derived from the signal's noise floor.
+This section outlines the main process to bring the two tanks up to the differing pressures as outlined by the experiment.
+Additionally, the two different methods to reach equilibrium between the two tanks are outlined afterward.
 
-\section{Technical Background}
+\subsubsection{Main Procedure}
+
+The ambient pressure was recorded first using the manometer in the lab.
+Then, the left tank was pressurized to 40 PSI via the following steps:
+(1) opening valve A2, (2) opening the left solenoid valve, (3) setting the flow rate to 50 g/min, (4) closing the left solenoid once gauge pressure reached 40 psi, (5) closing valve A2, and (6) setting the flow rate back to 0 g/min.
+Afterwhich, the right tank was pressured to -6 psi through:
+(1) opening valves A1 and A5, (2) opening the right solenoid valve, (3) setting the flow rate to 50 g/min, (4) closing the right solenoid once gauge pressure reach -6 psi, (5) closing valves A2 and A5, and (6) setting the flow rate back to 0 g/min.
+
+\subsubsection{Equilibrium Method 1}
+
+Method 1 of reaching equilibrium primarily used the center solenoid valve.
+First, the center solenoid valve was opened until there was an insignificant temperature difference between the two tanks.
+Measurements were then taken after this point, and the digital readings were reset.
+
+\subsubsection{Equilibrium Method 2}
+
+Method 2 of reaching equilibrium used the micrometer needle valve.
+The small ball valve (B2) and the micrometer valve were opened.
+Both valves were left open until there was an insignificant pressure difference between the two tanks, upon which measurements were recorded.
+
+\subsection{Initial Mass \& Volume of Left Tank}
+\label{methods_initial_mass_volume_left_tank}
+
+As with part 1, the ambient pressure was recorded using the manometer in the lab.
+Then, the left tank was pressurized to a gauge pressure of 40 psi, and was left to wait for pressure and temperature to stabilize.
+This was achieved using the following steps:
+(1) opening valve A2 and the left solenoid valve, (2) setting the flow rate to 50 g/min, (3) once the gauge pressure reach 40 psi in the left chamber ?, (5) pressure and temperature were left to stabilize.
+At this point, the data was measured by the method (whatever method requested by the TA).
+Finally, the left tank was emptied using the black pressure release valve (B1).
+
+\section{Results}
+\label{results}
+
+\section{Discussion}
+\label{discussion}
 
 \section{Conclusion}
+\label{conclusion}
 
 \label{last_page}
 
