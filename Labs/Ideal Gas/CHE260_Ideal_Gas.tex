@@ -4,7 +4,7 @@
 \input{math_commands.tex}
 
 %######## CHE260: Uncomment your submission name
-%\newcommand{\chename}{ - Project Proposal}
+\newcommand{\chename}{ - Lab 1 Report}
 %\newcommand{\chename}{Progress Report}
 %\newcommand{\chename}{Final Report}
 
@@ -20,9 +20,12 @@
 \usepackage{float}
 \usepackage{tikz}
 \usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{physics}
 
 %######## CHE260: Put your project Title here
-\title{Ideal Gas: Path Independecy of State Functions and Mass Flow Rate}
+\title{Ideal Gas: Path Independecy of  \\
+State Functions and Mass Flow Rate}
 
 %######## CHE260: Put your names, student IDs and Emails here
 \author{Karys Littlejohns\\
@@ -32,10 +35,6 @@ karys.littlejohns@mail.utoronto.ca
 Peter Leong \\
 Student\# 1010892955 \\
 peter.leong@mail.utoronto.ca 
-\AND
-Katherine Shepherd \\ 
-Student\# 1010895097 \\
-k.shepherd@mail.utoronto.ca 
 }
 
 % Reminder to self: put the PRA section somewhere!!
@@ -57,7 +56,7 @@ k.shepherd@mail.utoronto.ca
 
 \maketitle
 
-\vspace{-6ex}
+\vspace{-3ex}
 
 \begin{abstract}
 This project addresses the challenge of automated colourization for 256$\times$256 grayscale images using a dataset of 12,600 image pairs, balanced across human subjects, 
@@ -72,38 +71,31 @@ encoder-decoder architecture. This design captures high-level semantic features 
 
 \begin{multicols}{2}
 
+
 \section{Introduction}
 \label{introduction}
 
 \section{Experimental Methods}
 \label{experimental_methods}
 
-\subsection{Path Independencies of Thermodynamic State Properties}
+\subsection{Path Independence of Thermodynamic State Properties}
 \label{methods_path_independencies_thermodynamic_properties}
 
-This section outlines the main process to bring the two tanks up to the differing pressures as outlined by the experiment.
-Additionally, the two different methods to reach equilibrium between the two tanks are outlined afterward.
+This section describes the experimental procedures for establishing initial pressure conditions in two interconnected tanks and the subsequent methods for achieving thermodynamic equilibrium between them.
 
-\subsubsection{Main Procedure}
+\subsubsection{Initial Pressurization Procedure}
 
-The ambient pressure was recorded first using the manometer in the lab.
-Then, the left tank was pressurized to 40 PSI via the following steps:
-(1) opening valve A2, (2) opening the left solenoid valve, (3) setting the flow rate to 50 g/min, (4) closing the left solenoid once gauge pressure reached 40 psi, (5) closing valve A2, and (6) setting the flow rate back to 0 g/min.
-Afterwhich, the right tank was pressured to -6 psi through:
-(1) opening valves A1 and A5, (2) opening the right solenoid valve, (3) setting the flow rate to 50 g/min, (4) closing the right solenoid once gauge pressure reach -6 psi, (5) closing valves A2 and A5, and (6) setting the flow rate back to 0 g/min.
+The ambient pressure was first recorded using a laboratory manometer. The left tank was pressurized to 40~PSIG through the following sequence: (1)~open valve A2, (2)~activate the left solenoid valve, (3)~set mass flow rate to 50~g/min, (4)~deactivate the left solenoid upon reaching 40~PSIG gauge pressure, (5)~close valve A2, and (6)~reset flow rate to 0~g/min.
 
-\subsubsection{Equilibrium Method 1}
+The right tank was then evacuated to -6~PSIG using this procedure: (1)~open valves A1 and A5, (2)~activate the right solenoid valve, (3)~set mass flow rate to 50~g/min, (4)~deactivate the right solenoid upon reaching -6~PSIG gauge pressure, (5)~close valves A1 and A5, and (6)~reset flow rate to 0~g/min.
 
-Method 1 of reaching equilibrium primarily used the center solenoid valve.
-First, the center solenoid valve was opened until there was an insignificant temperature difference between the two tanks.
-Measurements were then taken after this point, and the digital readings were reset.
+\subsubsection{Equilibrium Method 1: Thermal Equilibrium Focus}
 
-\subsubsection{Equilibrium Method 2}
+The first equilibrium method utilized the center solenoid valve to prioritize thermal equilibration. The center solenoid valve was opened and maintained until temperature differences between the tanks became negligible. Data acquisition commenced once thermal equilibrium was established, with all digital measurement systems reset prior to recording.
 
-Method 2 of reaching equilibrium used the micrometer needle valve.
-The small ball valve (B2) and the micrometer valve were opened.
-Both valves were left open until there was an insignificant pressure difference between the two tanks, upon which measurements were recorded.
+\subsubsection{Equilibrium Method 2: Pressure Equilibrium Focus}
 
+The second equilibrium method employed the micrometer needle valve to emphasize pressure equilibration. Both the small ball valve (B2) and micrometer valve were opened and remained in this configuration until pressure differences between the tanks became insignificant. Experimental measurements were recorded once pressure equilibrium was achieved.
 \subsection{Initial Mass \& Volume of Left Tank}
 \label{methods_initial_mass_volume_left_tank}
 
@@ -119,7 +111,103 @@ Finally, the left tank was emptied using the black pressure release valve (B1).
 
 \section{Discussion}
 \label{discussion}
+\subsection{Part 1: Two-Tank Gas Expansion Analysis}
 
+\subsubsection{Volume Ratio Determination}
+
+The volume ratio between the two tanks is determined using mass conservation and the ideal gas law. Both tanks begin at identical initial conditions and reach the same final equilibrium state.
+
+\textbf{Initial State Masses:}
+\begin{align*}
+m_{1,i} &= \frac{P_i V_1}{R T_i} \\
+m_{2,i} &= \frac{P_i V_2}{R T_i}
+\end{align*}
+
+\textbf{Final State Masses:}
+\begin{align*}
+m_{1,f} &= \frac{P_f V_1}{R T_f} \\
+m_{2,f} &= \frac{P_f V_2}{R T_f}
+\end{align*}
+
+\textbf{Mass Conservation:}
+\[
+\frac{P_i V_1}{R T_i} + \frac{P_i V_2}{R T_i} = \frac{P_f V_1}{R T_f} + \frac{P_f V_2}{R T_f}
+\]
+
+Simplifying yields:
+\[
+\frac{P_i}{T_i}(V_1 + V_2) = \frac{P_f}{T_f}(V_1 + V_2)
+\]
+
+\textbf{Volume Ratio Solution:}
+\[
+\boxed{\frac{V_1}{V_2} = \frac{m_{1,f}}{m_{2,f}}}
+\]
+
+Since both tanks reach identical final pressure and temperature, the volume ratio directly equals the final mass ratio.
+
+\subsubsection{Heat Transfer Analysis}
+
+\textbf{Method 1: Non-Equilibrium Process}\\
+When tanks are not maintained in thermal equilibrium, heat transfers occur between the hotter tank, colder tank, and surroundings:
+\[
+Q_{\text{surr}} + Q_{\text{tank 2}} = -Q_{\text{tank 1}}
+\]
+Heat flows from the hotter tank (Tank 1) to both the surroundings and the colder tank (Tank 2).
+
+\textbf{Method 2: Constant Thermal Equilibrium}\\
+When both tanks are maintained at equal temperatures throughout the process:
+\[
+Q_{\text{surr}} = -(Q_{\text{tank 1}} + Q_{\text{tank 2}})
+\]
+Heat transfers directly from the combined system to the surroundings only.
+
+\textbf{State Property Verification}\\
+This experiment demonstrates the path independence of state properties. Despite different thermal pathways, both methods reach identical final equilibrium states. The final pressure and temperature depend solely on the initial and final states, not on the intermediate thermal history.
+
+The process can be visualized on temperature-volume diagrams, where Method 1 shows significant pressure variation before thermal equilibration, while Method 2 maintains thermal equilibrium throughout the pressure equalization.
+
+\subsection{Part 2: Initial Mass and Volume Determination}
+
+\subsubsection{Theoretical Framework}
+
+The initial mass and volume of the tank are determined using mass conservation and the ideal gas law:
+
+\begin{align}
+M_f &= M_i + \int \dot{m}  dt \label{eq:mass_cons} \\
+P_i V &= M_i R T_i \label{eq:ig_init} \\
+P_f V &= M_f R T_f \label{eq:ig_final}
+\end{align}
+
+\subsubsection{Solution Methodology}
+
+Eliminating the unknown volume $V$ by dividing the initial and final ideal gas equations:
+\[
+\frac{P_i}{P_f} = \frac{M_i T_i}{M_f T_f}
+\]
+
+Substituting the mass conservation relation:
+\[
+\frac{P_i}{P_f} = \frac{M_i T_i}{(M_i + \int \dot{m}  dt) T_f}
+\]
+
+Solving for the initial mass $M_i$:
+\[
+\boxed{M_i = \frac{-P_i T_f \int \dot{m}  dt}{P_i T_f - P_f T_i}}
+\]
+
+The tank volume is subsequently determined from the ideal gas law:
+\[
+V = \frac{M_i R T_i}{P_i}
+\]
+
+\subsubsection{Experimental Uncertainties}
+
+Several experimental uncertainties affected the measurement accuracy. Achieving precisely 40 psig initial pressure introduced human error during the pressurization process. Instrument resolution limitations created inherent measurement uncertainties in both pressure and temperature readings. The mass flow meter possessed finite precision that propagated through the mass integration calculation. Thermal equilibrium assumptions may not have been perfectly satisfied during data collection, introducing additional systematic error.
+
+\subsubsection{Ideal Gas Law Assumptions}
+
+The application of the ideal gas law introduces theoretical approximations that affect results. The model assumes gas molecules have negligible volume, possess no intermolecular forces, and undergo perfectly elastic collisions. In reality, air exhibits compressibility effects that deviate from ideal behavior. However, these deviations remain minimal under the experimental conditions of 40 psig and approximately 25°C. At these moderate pressure and temperature levels, the compressibility factor approaches unity, validating the ideal gas law as an appropriate engineering approximation for this analysis.
 \section{Conclusion}
 \label{conclusion}
 
@@ -128,6 +216,7 @@ Finally, the left tank was emptied using the black pressure release valve (B1).
 \newpage
 \bibliographystyle{iclr2022_conference}
 \bibliography{CHE260_Proposal_Ref}
-
+    
 \end{multicols}
+
 \end{document}
