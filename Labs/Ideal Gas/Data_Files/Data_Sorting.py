@@ -60,7 +60,7 @@ def parse_data_file(filename):
 
 # Main execution
 if __name__ == "__main__":
-    # Full path with your filename - REPLACE "your_filename.txt" with your actual file name
+    # Replace final directory to desired file
     full_path = r"C:\Users\Peter\Documents\GitHub\CHE260_Thermodynamics_Heat_Transfer\Labs\Ideal Gas\Data_Files\lab1-part2a.txt"
     
     # Parse the data file
@@ -72,13 +72,5 @@ if __name__ == "__main__":
         print("Time(s)\tT1(°C)\tT2(°C)\tP1(PSI)\tP2(PSI)\tMass Flow(g/min)")
         for i in range(min(10, len(time))):
             print(f"{time[i]:.1f}\t{T1[i]:.2f}\t{T2[i]:.2f}\t{P1[i]:.2f}\t{P2[i]:.2f}\t{mass_flowrate[i]:.2f}")
-        
-        # print(f"\nArrays created:")
-        # print(f"time: {len(time)} points")
-        # print(f"T1: {len(T1)} points") 
-        # print(f"T2: {len(T2)} points")
-        # print(f"P1: {len(P1)} points")
-        # print(f"P2: {len(P2)} points")
-        # print(f"mass_flowrate: {len(mass_flowrate)} points")
     else:
         print("Failed to parse the data file.")
