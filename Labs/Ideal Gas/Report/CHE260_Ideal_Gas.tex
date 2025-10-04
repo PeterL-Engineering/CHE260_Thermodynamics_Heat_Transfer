@@ -1,0 +1,221 @@
+\documentclass{article} % For LaTex2e
+\usepackage{iclr2022_conference,times}
+% Optional math commands from https://github.com/goodfeli/dlbook_notation.
+\input{math_commands.tex}
+
+%######## CHE260: Uncomment your submission name
+\newcommand{\chename}{ - Ideal Gas Law Report - PRA0101}
+%\newcommand{\chename}{Progress Report}
+%\newcommand{\chename}{Final Report}
+
+%######## CHE260: Put your Group Number here
+%\newcommand{\gpnumber}{40}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{setspace}
+
+%######## CHE260: Put your project Title here
+\title{State Function Path Independence and Mass Flow \\
+Rate Analysis in Ideal Gas Systems}
+
+%######## CHE260: Put your names, student IDs and Emails here
+\author{Karys Littlejohns\\
+Student\# 1010893142 \\
+karys.littlejohns@mail.utoronto.ca
+\And
+Peter Leong \\
+Student\# 1010892955 \\
+peter.leong@mail.utoronto.ca 
+}
+
+% Reminder to self: put the PRA section somewhere!!
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to \LaTex{} to determine where to break
+% the lines. Using \AND forces a linebreak at that point. So, if \LaTex{}
+% puts 3 of 4 authors names on the first line, and the last on the second
+% line, try using \AND instead of \And before the third author name.
+
+\newcommand{\fix}{\marginpar{FIx}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\iclrfinalcopy 
+%######## CHE260: Document starts here
+\begin{document}
+
+\maketitle
+
+\vspace{-3ex}
+\doublespacing
+
+\begin{abstract}
+This experimental study demonstrates the path independence of thermodynamic state properties using a two-tank gas system. Two different equilibrium methods produced identical final states, confirming that system equilibrium depends only on initial conditions, not the process path. Mass conservation and ideal gas law analysis determined initial system parameters, validating fundamental thermodynamic principles.
+%######## CHE260: Do not change the next line. This shows your Main body page count.
+----Total Pages: \pageref{last_page}
+\end{abstract}
+
+\vspace{2ex}
+
+\begin{multicols}{2}
+
+
+\section{Introduction}
+\label{introduction}
+
+Thermodynamic state properties are fundamental to engineering systems analysis, with path independence representing a critical principle where final states depend only on initial conditions, not process paths. This concept underpins the design and optimization of energy systems, from power plants to refrigeration cycles.
+
+This experiment verifies path independence through gas expansion between two tanks. The objectives are to: (1) demonstrate identical final states via different equilibrium methods, (2) determine system parameters using mass conservation and ideal gas laws, and (3) validate that thermodynamic properties are path-independent. This provides practical confirmation of core thermodynamic principles.
+\section{Experimental Methods}
+\label{experimental_methods}
+
+\subsection{Path Independence of Thermodynamic State Properties}
+\label{methods_path_independencies_thermodynamic_properties}
+
+This section describes the experimental procedures for establishing initial pressure conditions in two interconnected tanks and the subsequent methods for achieving thermodynamic equilibrium between them.
+
+\subsubsection{Initial Pressurization Procedure}
+
+The ambient pressure was first recorded using a laboratory manometer. The left tank was pressurized to 40~PSIG through the following sequence: (1)~open valve A2, (2)~activate the left solenoid valve, (3)~set mass flow rate to 50~g/min, (4)~deactivate the left solenoid upon reaching 40~PSIG gauge pressure, (5)~close valve A2, and (6)~reset flow rate to 0~g/min.
+
+The right tank was then evacuated to -6~PSIG using this procedure: (1)~open valves A1 and A5, (2)~activate the right solenoid valve, (3)~set mass flow rate to 50~g/min, (4)~deactivate the right solenoid upon reaching -6~PSIG gauge pressure, (5)~close valves A1 and A5, and (6)~reset flow rate to 0~g/min.
+
+\subsubsection{Equilibrium Method 1: Thermal Equilibrium Focus}
+
+The first equilibrium method utilized the center solenoid valve to prioritize thermal equilibration. The center solenoid valve was opened and maintained until temperature differences between the tanks became negligible. Data was saved once thermal equilibrium was established, with all digital measurement systems reset prior to recording.
+
+\subsubsection{Equilibrium Method 2: Pressure Equilibrium Focus}
+
+The second equilibrium method employed the micrometer needle valve to emphasize pressure equilibration. Both the small ball valve (B2) and micrometer valve were opened and remained in this configuration until pressure differences between the tanks became insignificant. Data was saved in LabVIEW once pressure equilibrium was achieved.
+\subsection{Initial Mass \& Volume of Left Tank}
+\label{methods_initial_mass_volume_left_tank}
+
+As with part 1, the ambient pressure was recorded using the manometer in the lab.
+Then, the left tank was pressurized to a gauge pressure of 40 psi, and was left to wait for pressure and temperature to stabilize.
+This was achieved using the following steps:
+(1) opening valve A2 and the left solenoid valve, (2) setting the flow rate to 50 g/min, (3) once the gauge pressure reach 40 psi in the left chamber ?, (5) pressure and temperature were left to stabilize.
+At this point, the data was saved using LabVIEW.
+Finally, the left tank was emptied using the black pressure release valve (B1).
+
+\section{Results}
+\label{results}
+
+\section{Discussion}
+\label{discussion}
+
+This section analyzes the experimental results from both the two-tank gas expansion system and the mass flow rate characterization. The analysis focuses on volume ratio determination, heat transfer pathways, and validation of thermodynamic principles.
+
+\subsection{Two-Tank Gas Expansion Analysis}
+
+\subsubsection{Volume Ratio Determination}
+The volume ratio between the two tanks is determined using mass conservation and the ideal gas law. Both tanks begin at identical initial conditions and reach the same final equilibrium state.
+
+\textbf{Initial State Masses:}
+\begin{align*}
+m_{1,i} = \frac{P_i V_1}{R T_i} \qquad\qquad
+m_{2,i} = \frac{P_i V_2}{R T_i}
+\end{align*}
+
+\textbf{Final State Masses:}
+\begin{align*}
+m_{1,f} = \frac{P_f V_1}{R T_f} \qquad\qquad
+m_{2,f} = \frac{P_f V_2}{R T_f}
+\end{align*}
+
+\textbf{Mass Conservation:}
+\[
+\frac{P_i V_1}{R T_i} + \frac{P_i V_2}{R T_i} = \frac{P_f V_1}{R T_f} + \frac{P_f V_2}{R T_f}
+\]
+
+Simplifying yields:
+\[
+\frac{P_i}{T_i}(V_1 + V_2) = \frac{P_f}{T_f}(V_1 + V_2)
+\]
+
+\textbf{Volume Ratio Solution:}
+\[
+\boxed{\frac{V_1}{V_2} = \frac{m_{1,f}}{m_{2,f}}}
+\]
+
+Since both tanks reach identical final pressure and temperature, the volume ratio directly equals the final mass ratio.
+
+\subsubsection{Heat Transfer Analysis}
+\textbf{Method 1: Non-Equilibrium Process}\\
+When tanks are not maintained in thermal equilibrium, heat transfers occur between the hotter tank, colder tank, and surroundings:
+\[
+Q_{\text{surr}} + Q_{\text{tank 2}} = -Q_{\text{tank 1}}
+\]
+Heat flows from the hotter tank (Tank 1) to both the surroundings and the colder tank (Tank 2).
+
+\textbf{Method 2: Constant Thermal Equilibrium}\\
+When both tanks are maintained at equal temperatures throughout the process:
+\[
+Q_{\text{surr}} = -(Q_{\text{tank 1}} + Q_{\text{tank 2}})
+\]
+Heat transfers directly from the combined system to the surroundings only.
+
+\textbf{State Property Verification}\\
+This experiment demonstrates the path independence of state properties. Despite different thermal pathways, both methods reach identical final equilibrium states. The final pressure and temperature depend solely on the initial and final states, not on the intermediate thermal history.
+
+\subsection{Mass Flow Rate Analysis}
+
+\subsubsection{Initial Mass and Volume Determination}
+The initial mass and volume are determined using mass conservation and ideal gas law:
+\begin{align}
+M_f &= M_i + \int \dot{m}  dt \label{eq:mass_cons} \\
+P_i V &= M_i R T_i \label{eq:ig_init} \\
+P_f V &= M_f R T_f \label{eq:ig_final}
+\end{align}
+
+\subsubsection{Solution Methodology}
+Eliminating $V$ by dividing initial and final ideal gas equations:
+\[
+\frac{P_i}{P_f} = \frac{M_i T_i}{M_f T_f}
+\]
+Substituting mass conservation:
+\[
+\frac{P_i}{P_f} = \frac{M_i T_i}{(M_i + \int \dot{m}  dt) T_f}
+\]
+Solving for $M_i$:
+\[
+\boxed{M_i = \frac{-P_i T_f \int \dot{m}  dt}{P_i T_f - P_f T_i}}
+\]
+Volume follows from ideal gas law:
+\[
+V = \frac{M_i R T_i}{P_i}
+\]
+
+\subsection{Experimental Uncertainties}
+Several experimental uncertainties affected the measurement accuracy. Achieving precisely 40 psig initial pressure introduced human error during the pressurization process. Instrument resolution limitations created inherent measurement uncertainties in both pressure and temperature readings. The mass flow meter possessed finite precision that propagated through the mass integration calculation. Thermal equilibrium assumptions may not have been perfectly satisfied during data collection, introducing additional systematic error.
+
+\subsection{Ideal Gas Law Assumptions}
+The application of the ideal gas law introduces theoretical approximations that affect results. The model assumes gas molecules have negligible volume, possess no intermolecular forces, and undergo perfectly elastic collisions. In reality, air exhibits compressibility effects that deviate from ideal behavior. However, these deviations remain minimal under the experimental conditions of 40 psig and approximately 25°C. At these moderate pressure and temperature levels, the compressibility factor approaches unity, validating the ideal gas law as an appropriate engineering approximation for this analysis.
+
+\section{Conclusion}
+\label{conclusion}
+
+This experiment successfully demonstrated the path independence of thermodynamic state properties through gas expansion between interconnected tanks. 
+The results confirm that identical final equilibrium states were achieved despite different thermodynamic pathways, validating that pressure and temperature depend solely on initial conditions rather than intermediate processes. 
+Mass conservation and ideal gas law analysis provided reliable determination of initial system parameters, reinforcing these fundamental thermodynamic principles essential for engineering system design and analysis.
+
+\label{last_page}
+
+\newpage
+\bibliographystyle{iclr2022_conference}
+\bibliography{CHE260_Proposal_Ref}
+    
+\end{multicols}
+
+\end{document}
+
