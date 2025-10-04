@@ -39,8 +39,8 @@ def parse_data_file(filename):
                         P2_val = float(values[4])
                         mass_flow_val = float(values[5])
                         
-                        # Only keep data points at 0.5 second intervals
-                        if abs(time_val % 0.5) < 0.001:
+                        # Only keep data points at 0.2 second intervals
+                        if abs(time_val % 0.2) < 0.001:
                             time.append(time_val)
                             T1.append(T1_val)
                             T2.append(T2_val)
